@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"runtime"
 
-	"github.com/ServiceWeaver/weaver-kube/internal/impl"
 	"github.com/ServiceWeaver/weaver/runtime/tool"
+	"github.com/kidus-tiliksew/weaver-kube/internal/impl"
 )
 
 var versionCmd = tool.Command{

@@ -15,14 +15,14 @@ import (
 
 func init() {
 	codegen.Register(codegen.Registration{
-		Name:  "github.com/ServiceWeaver/weaver-kube/examples/echo/Echoer",
+		Name:  "github.com/kidus-tiliksew/weaver-kube/examples/echo/Echoer",
 		Iface: reflect.TypeOf((*Echoer)(nil)).Elem(),
 		Impl:  reflect.TypeOf(echoer{}),
 		LocalStubFn: func(impl any, caller string, tracer trace.Tracer) any {
-			return echoer_local_stub{impl: impl.(Echoer), tracer: tracer, echoMetrics: codegen.MethodMetricsFor(codegen.MethodLabels{Caller: caller, Component: "github.com/ServiceWeaver/weaver-kube/examples/echo/Echoer", Method: "Echo", Remote: false})}
+			return echoer_local_stub{impl: impl.(Echoer), tracer: tracer, echoMetrics: codegen.MethodMetricsFor(codegen.MethodLabels{Caller: caller, Component: "github.com/kidus-tiliksew/weaver-kube/examples/echo/Echoer", Method: "Echo", Remote: false})}
 		},
 		ClientStubFn: func(stub codegen.Stub, caller string) any {
-			return echoer_client_stub{stub: stub, echoMetrics: codegen.MethodMetricsFor(codegen.MethodLabels{Caller: caller, Component: "github.com/ServiceWeaver/weaver-kube/examples/echo/Echoer", Method: "Echo", Remote: true})}
+			return echoer_client_stub{stub: stub, echoMetrics: codegen.MethodMetricsFor(codegen.MethodLabels{Caller: caller, Component: "github.com/kidus-tiliksew/weaver-kube/examples/echo/Echoer", Method: "Echo", Remote: true})}
 		},
 		ServerStubFn: func(impl any, addLoad func(uint64, float64)) codegen.Server {
 			return echoer_server_stub{impl: impl.(Echoer), addLoad: addLoad}
@@ -47,7 +47,7 @@ func init() {
 		ReflectStubFn: func(caller func(string, context.Context, []any, []any) error) any {
 			return main_reflect_stub{caller: caller}
 		},
-		RefData: "⟦2bd5349f:wEaVeReDgE:github.com/ServiceWeaver/weaver/Main→github.com/ServiceWeaver/weaver-kube/examples/echo/Echoer⟧\n⟦914f1096:wEaVeRlIsTeNeRs:github.com/ServiceWeaver/weaver/Main→echo⟧\n",
+		RefData: "⟦2bd5349f:wEaVeReDgE:github.com/ServiceWeaver/weaver/Main→github.com/kidus-tiliksew/weaver-kube/examples/echo/Echoer⟧\n⟦914f1096:wEaVeRlIsTeNeRs:github.com/ServiceWeaver/weaver/Main→echo⟧\n",
 	})
 }
 

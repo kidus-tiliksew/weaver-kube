@@ -153,7 +153,7 @@ func checkVersionCompatibility(appBinary string) error {
 	updating the 'weaver-kube' command by running the following.
 
 		go get github.com/ServiceWeaver/weaver@latest
-		go install github.com/ServiceWeaver/weaver-kube/cmd/weaver-kube@latest
+		go install github.com/kidus-tiliksew/weaver-kube/cmd/weaver-kube@latest
 
 	Then, re-build your code and re-run 'weaver-kube deploy'. If the problem
 	persists, please file an issue at https://github.com/ServiceWeaver/weaver/issues`,
