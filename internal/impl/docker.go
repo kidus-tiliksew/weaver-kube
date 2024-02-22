@@ -138,6 +138,8 @@ RUN go install "{{.Install}}"
 {{end}}
 
 FROM ubuntu:rolling
+RUN apt update
+RUN apt install ca-certificates -y
 WORKDIR /weaver/
 COPY . .
 {{if .Install }}
